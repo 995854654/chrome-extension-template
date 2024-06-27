@@ -1,0 +1,61 @@
+{
+    "name": "__MSG_appName__",
+    "version": "1.0.0",
+    "description": "__MSG_appDescription__",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "static/js/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "static/js/content.js"
+            ],
+            "css": [
+                "static/css/content.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "storage",
+        "contextMenus",
+        "tabs",
+        "webRequest",
+        "sidePanel"
+    ],
+    "host_permissions": [],
+    "side_panel": {
+        "default_path": "sidePanel.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "/images/*.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "images/yami.png",
+            "32": "images/yami.png",
+            "48": "images/yami.png",
+            "128": "images/yami.png"
+        },
+        "default_title": "forty extension summary"
+    },
+    "icons": {
+        "16": "images/yami.png",
+        "32": "images/yami.png",
+        "48": "images/yami.png",
+        "128": "images/yami.png"
+    },
+    "default_locale": "zh_CN"
+}
