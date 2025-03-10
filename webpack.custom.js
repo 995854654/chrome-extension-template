@@ -10,7 +10,7 @@ module.exports = {
         content: "./src/content/index.js",
         background: "./src/background/index.js",
         // sidePanel
-        panel: "./src/sidePanel/index.js",
+        panel: "./src/sidePanel/index.tsx",
         // newTab
         options: "./src/options/index.js"
     },

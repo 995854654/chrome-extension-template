@@ -1,10 +1,13 @@
 import React from 'react'
+import { Provider } from "react-redux";
+import { store } from "@/store"
 
-const SidePanel:React.FC = () => {
+const SidePanel: React.FC = () => {
   return (
-    <div>
+    <Provider store={store}>
+
       SidePanel
-    </div>
+    </Provider>
   )
 }
 
